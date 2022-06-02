@@ -4,21 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="/client/index2.html" />
     <title>cadalena</title>
 </head>
 
 <body>
     <header>
-        <h1>Films Mouvies</h1>
-        <h2>A l'Affiche actuellement</h2>
-    </header>  
+        <nav class="header">
+          <a href="/client/index2.html">page 2</a>
+        </nav>
+    </header> 
 
+    <div class="body" >
+
+    <div class="titre">
+        <h1>Film à l'affiche</h1>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/client/assets/img/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/client/assets/img/gG9fTyDL03fiKnOpf2tr01sncnt.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/client/assets/img/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+   <!-- <section class="contenue">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="top"src="/client/assets/img/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img  class="top"src="/client/assets/img/gG9fTyDL03fiKnOpf2tr01sncnt.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="top" src="/client/assets/img/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="top" src="/client/assets/img/qK7Ssnrfvrt65F66A1thvehfQg2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="top" src="/client/assets/img/" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="top" src="/client/assets/img/" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="top" src="/client/assets/img/" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="top" src="/client/assets/img" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+    
+            <div id="movies" class="container">
+
+                <div id="films_movies" class="row mx-auto"></div>     
+            </div>
+
+                <div class="card" class="bg-success p-2 text-dark bg-opacity-25">
+                </div>
+            </div>
+      
+     </div>
     <footer>
         <p>© 2022 Copyright</p>
     </footer>
-     
-    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="./assets/main.js"></script>
 </body>

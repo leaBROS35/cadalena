@@ -4,30 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/47ef3edca0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="/client/index2.html" />
     <title>cadalena</title>
 </head>
 
 <body>
     <header>
-        <nav class="header">
+        <div class="logo">
+            <img src="assets/img/logo cadalena.png" class="img-fluid w-2 p-1 img "
 
-        </nav>
-    </header>  https://image.tmdb.org/t/p/original/jrgifaYeUtTnaH7NF5Drkgjg2MB.jpg
-    <div id="move" class="container">
-
-        <div id="bodi" class="row mx-auto"></div>     
-    </div>
-
-        <div class="card" class="bg-success p-2 text-dark bg-opacity-25">
+            alt="logo" height="10vh">
         </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link"style="text background-color: #55ACEE;" href="https://www.themoviedb.org/movie/upcoming?language=fr">Films</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://www.themoviedb.org/tv/top-rated?language=fr">Emissions télévisés</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://www.themoviedb.org/person?language=fr-FR">Artistes</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://www.themoviedb.org/documentation/api?language=fr-FR">API</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+         
+    </header>
+    
+    <div class="body">
+        <div id="movie" class= "card" style="width: 45rem;"></div>
     </div>
-
-
-               
+    <footer>
+    </div>
+    <div class="container-fluid ">
+        <footer class="bg-light text-center background-color grey p-5 my-5 ye-5">
+        
+        <div class="container p- pb-0">
+           
+            <section>
+           
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #3B5998;" href="#!" role="button"><i class="fa-brands fa-facebook"></i></a>
+           
+            <a class="btn btn-primary btn-floating m-1"
+                style="background-color: #55ACEE;"
+                href="https://twitter.com/themoviedb"
+                role="button"><i class="fab fa-twitter"></i></a>
+            
+            <a class="btn btn-primary btn-floating m-1"
+                style="background-color: #DD4B39;"
+                href="https://www.themoviedb.org/?language=fr"
+                role="button"
+                ><i class="fab fa-google"></i
+            ></a>
+            
+            <a class="btn btn-primary btn-floating m-1"
+                style="background-color: #AC2BAC;"
+                href="https://www.themoviedb.org/?language=fr"
+                role="button"
+                ><i class="fab fa-instagram"></i
+            ></a>
+            <!-- Linkedin -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #0082CA;"
+                href="https://www.linkedin.com/company/themoviedb.org/about/"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+            ></a>
+            </section>
+            <!-- Section: Social media -->
         </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center pb-3" style="background-color: rgba(0, 1, 1, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white">CADALENA</a>
+        </div>
+        <!-- Copyright -->
+        </footer>
+    </div>
     <footer>
         <p>© 2022 Copyright</p>
     </footer>
@@ -35,6 +104,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="./assets/main.js"></script>
+    
+    <script>
+        const idMovie = window.location.search.replace('?id=', '');
+        axios.get('http://localhost:8002/api/posts/'+idMovie)
+        .then(response => response.data)
+        .then(data => {
+            console.log(data)
+            //const container = document.createElement('div');
+            const card = document.createElement('section')
+            const cardBody = document.createElement('div')
+            const poster_img = document.createElement('img');
+            const title = document.createElement('h2');
+            const release_date = document.createElement('h5');
+            const genre_ids = document.createElement('h5')
+            const overview = document.createElement('p');
+
+            poster_img.src = "https://image.tmdb.org/t/p/original/"+data.poster_path;
+            title.innerText = data.title;
+            release_date.innerText = data.release_date;
+            genre_ids.innerText = data.genre_ids;
+            overview.innerText = data.overview;
+
+            card.classList.add('row-g-0');
+            card.classList.add('col-md-4');
+            card.classList.add('col-md-8');
+            card.classList.add('my-2')
+            card.classList.add('card');
+            poster_img.classList.add('card-img-top');
+            cardBody.classList.add('card-body');
+            title.classList.add('card-title');
+            release_date.classList.add('card-text');
+            genre_ids.classList.add('card-text');   
+            overview.classList.add('card-text')
+
+      ;
+            card.appendChild(poster_img);
+            card.appendChild(title);
+            card.appendChild(release_date);
+            card.appendChild(genre_ids);
+            card.appendChild(overview);
+            card.appendChild(cardBody);
+            document.getElementById('movie').appendChild(card);
+        })
+        console.log(idMovie)
+    </script>
 </body>
 </html>

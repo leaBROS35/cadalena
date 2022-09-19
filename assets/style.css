@@ -104,6 +104,7 @@ background-size: contain;
     padding-top: 20vh;
   }
 .lal{
+    color: #000000;
     display: flex;
     align-items: center;
 }
